@@ -1,17 +1,36 @@
-import React, { Component } from 'react';
-import { Container, Header, Content, Card, CardItem, Thumbnail, Right, Text, Button, Icon, Left, Body } from 'native-base';
+import React, { Component } from "react";
+import { StyleSheet, Text, View } from "react-native";
+import {
+  StackNavigator,
+} from 'react-navigation';
 
-class inputForm extends Component {
-    render() {
-        return (
-            
-            <Container>                            
-                <Content>
-                </Content>                            
-            </Container>
-            
-        );
-    }
-}
 
-export default inputForm;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5FCFF"
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: "center",
+    margin: 10
+  }
+});
+
+const ImputForm = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.welcome}>
+        THIS IS THE SECOND SCREEN!
+      </Text>
+    </View>
+  );
+};
+
+ImputForm.navigationOptions = {
+  title: "Second Screen Title"
+};
+
+export default ImputForm;

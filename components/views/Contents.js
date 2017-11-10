@@ -1,46 +1,42 @@
 import React, { Component } from 'react';
-import {View, Image, StyleSheet} from 'react-native';
+import {View, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Right, Text, Button, Icon, Left, Body } from 'native-base';
 
 class Contents extends Component {
     render() {
-        return (
-          
+        return (          
            <View style={styles.HomeContent}>
-
-                    <View style={styles.boxContent}>
-                        <View style={styles.boxImageLeft}> 
+                 <View style={styles.boxContent}>
+                    <TouchableOpacity onPress={this._onPressButton}>
+                         <View style={styles.boxImageLeft}> 
                              <Image style={styles.Images} 
-                                    source={require('../assets/images/produk/produk1.png')}
-                                    onPress={() => Linking.openURL('http://google.com')}
-                                />
-                        </View>
+                                     source={require('../assets/images/produk/produk1.png')}
+                                 />
+                         </View>
+                     </TouchableOpacity>
 
-                        <View style={{flex:0.1}}></View>
-
-                        <View style={styles.boxImageRight}>
-                            <Image style={styles.Images} 
-                                    source={require('../assets/images/produk/produk2.png')}
-                                />
-                        </View>
-                    </View>
-                    <View style={styles.boxContent}>
-                        <View style={styles.boxImageLeft}> 
+                     <View style={{flex:0.1}}></View>
+                     <TouchableOpacity onPress={this._onPressButton}>
+                         <View style={styles.boxImageRight}>
                              <Image style={styles.Images} 
-                                    source={require('../assets/images/produk/produk3.png')}
-                                />
-                        </View>
-
-                        <View style={{flex:0.1}}></View>
-
-                        <View style={styles.boxImageRight}>
-                            <Image style={styles.Images} 
-                                    source={require('../assets/images/produk/produk1.png')}
-                                />
-                        </View>
+                                     source={require('../assets/images/produk/produk2.png')}
+                                 />
+                         </View>
+                     </TouchableOpacity>
+                 </View>
+                <View style={styles.boxContent}>
+                    <View style={styles.boxImageLeft}> 
+                         <Image style={styles.Images} 
+                                source={require('../assets/images/produk/produk3.png')}
+                            />
                     </View>
-                        
-                     
+                    <View style={{flex:0.1}}></View>
+                    <View style={styles.boxImageRight}>
+                        <Image style={styles.Images} 
+                                source={require('../assets/images/produk/produk1.png')}
+                            />
+                    </View>
+                </View>
             </View>
     
         );

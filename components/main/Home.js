@@ -6,6 +6,7 @@ import {Drawer} from 'native-base';
 import Slider from './Slider';
 import Contents from '../views/Contents';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Right, Footer,Text, Button, Icon,Title, Left, FooterTab, Body } from 'native-base';
+import NavigationContainer from '../views/NavigationContainer';
 
 class Home extends Component {
 
@@ -28,6 +29,7 @@ class Home extends Component {
                         <Menu
                             openDrawer={this.openDrawer.bind(this)}
                         />                                 
+                     
                     <Slider /> 
                     <Contents />              
                 </Drawer>               

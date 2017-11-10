@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import Splash from './components/Splash';
 import Login from './components/Login';
 import Home from './components/main/Home';
+import Anatomy from './components/views/NavigationContainer';
+
 
 
 export default class App extends React.Component {
